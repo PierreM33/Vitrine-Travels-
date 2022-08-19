@@ -1,0 +1,647 @@
+/* POLICE */
+
+@import url('https://fonts.googleapis.com/css2?family=Lora&family=Prompt&display=swap');
+@import url('href="https://fonts.googleapis.com/css2?family=Inter&display=swap"');
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: 'inter', 'prompt', 'Lora', sans-serif;
+}
+
+
+
+
+header {
+    width: 100%;
+    height: 75px;
+    position: fixed;
+    transition: all 0.5 ease-in-out;
+
+}
+
+header.scroll {
+    background-color: rgb(26, 26, 26);
+}
+
+nav {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+
+    display: flex;
+    align-items: center;
+    justify-content: baseline;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    height: 50%;
+    width: 15%;
+    margin-left: 10%;
+    text-align: center;
+    /*text-shadow: black 0.1em 0.1em 0.2em;*/
+}
+
+.logo:hover {
+    animation: logo 3s linear infinite;
+    cursor: pointer;
+}
+
+@keyframes logo {
+    50% {
+        opacity: 0;
+    }
+}
+
+.toggle {
+    display: none;
+}
+
+
+.menu {
+
+    color: white;
+    height: 50%;
+    width: 20%;
+    margin-right: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+
+li {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+a {
+
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    padding-bottom: 5%;
+}
+
+a:hover {
+    font-size: 1.1rem;
+    padding-bottom: 5%;
+    border-bottom: 2px solid white;
+    opacity: 0.5;
+}
+
+
+
+
+@media all and (max-width: 1100px) {
+
+    header {
+        background: transparent;
+    }
+
+    .toggle {
+        display: block;
+        font-size: 2rem;
+        cursor: pointer;
+        position: relative;
+        z-index: 20;
+        color: white;
+        margin-right: 5%;
+    }
+
+
+    .logo {
+        position: relative;
+        z-index: 20;
+    }
+
+    .ouvrir {
+        display: block;
+    }
+
+    .fermer {
+        color: transparent;
+
+    }
+
+    .open .ouvrir {
+        display: none;
+    }
+
+    .open .fermer {
+        display: block;
+        color: white;
+    }
+
+    .menu {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: #000;
+        flex-direction: column;
+        padding: 2rem;
+        justify-content: space-around;
+        transform: translateX(-100%);
+        transition: transform 1s;
+    }
+
+    .menu li a {
+        font-size: 2rem;
+    }
+
+    .open .menu {
+        transform: translateX(0);
+    }
+}
+
+
+@media all and (max-width: 500px) {
+
+
+    .toggle {
+        margin-right: 0%;
+    }
+
+}
+
+/* CENTER BLOCK */
+
+.container1 {
+    height: 100vh;
+    background-image: url("/images/background.jpg");
+    background-size: cover;
+    opacity: 1.5;
+}
+
+.centerBlock {
+
+    height: 80%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.blockTop {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+    font-size: 3.5rem;
+    font-weight: bold;
+
+}
+
+.blockMiddle {
+    width: 30%;
+    height: 1px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.blockBot {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.blockBot:hover,
+.blockTop:hover {
+    opacity: 0.5;
+}
+
+a.next {
+    text-decoration: none;
+    padding-top: 6%;
+    height: 18%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    transition: 2.5s;
+}
+
+.buttonBot {
+    animation: buttonBot 3s linear infinite;
+}
+
+@keyframes buttonBot {
+    50% {
+        opacity: 0;
+    }
+}
+
+.buttonBot:hover {
+    opacity: 0.4;
+    cursor: pointer;
+}
+
+@media all and (max-width: 1100px) {
+    .blockBot {
+        width: 70%;
+        text-align: center;
+        font-size: 1rem;
+    }
+}
+
+@media all and (max-width: 500px) {
+
+
+    .blockBot {
+        width: 80%;
+        height: 20%;
+    }
+
+}
+
+/*-------------CONTAINER2---------------*/
+
+.container2 {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.secondBlockTop {
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.secondTitle {
+
+    font-size: 2.2rem;
+    color: black;
+    text-transform: uppercase;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+.secondDesc {
+    font-size: 1.2rem;
+    color: black;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.secondBlockBot {
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    background-color: #e5e9ec;
+}
+
+.secondLeft {
+
+    width: 35%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.leftTitle {
+
+    width: 90%;
+    font-size: 1.5rem;
+    color: black;
+    text-transform: uppercase;
+    height: 10%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    font-weight: bold;
+}
+
+.leftDesc {
+    font-size: 1rem;
+    color: black;
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    padding: 5%;
+
+}
+
+.secondButton {
+    width: 90%;
+    height: 20%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.frameworkButton {
+    width: 200px;
+    height: 55px;
+    border: 2px solid black;
+    background-color: transparent;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: 0.2;
+}
+
+.frameworkButton:hover {
+
+    border: 0px;
+    background-color: rgb(68, 224, 185);
+    color: white;
+
+}
+
+.secondRight {
+    width: 35%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.pictureOne {
+    width: 80%;
+    height: 80%;
+    border-radius: 10px;
+}
+
+@media all and (max-width: 1100px) {
+
+    .secondTitle {
+        font-size: 2rem;
+    }
+
+    .secondDesc {
+        font-size: 1rem;
+        width: 80%;
+        text-align: center;
+    }
+
+
+    .secondLeft {
+        width: 45%;
+    }
+
+}
+
+
+
+
+@media all and (max-width: 800px) {
+
+
+
+    .secondLeft {
+
+        width: 55%;
+    }
+
+
+    .leftTitle {
+
+        height: 15%;
+    }
+
+    .leftDesc {
+
+        height: 50%;
+
+    }
+}
+
+@media all and (max-width: 500px) {
+
+
+    .secondTitle {
+        font-size: 1.2rem;
+    }
+
+    .secondRight {
+        display: none;
+    }
+
+    .secondLeft {
+        width: 90%;
+    }
+
+
+}
+
+@media all and (max-width: 350px) {
+
+    .leftTitle {
+        height: 30%;
+        justify-content: center;
+    }
+
+    .leftDesc {
+        font-size: 1rem;
+        height: 50%;
+        padding: 0%;
+
+    }
+
+    .secondButton {
+        height: 30%;
+        justify-content: center;
+
+    }
+}
+
+/*---------- SECOND BLOCK REVERSE ------------*/
+
+.container3 {
+    height: 50vh;
+}
+
+.secondBlockReverse {
+
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row-reverse;
+
+}
+
+/*---------- GALERIE ------------*/
+
+.container4 {
+    min-height: 100vh;
+}
+
+.galeryTitle {
+    width: 100%;
+    height: 125px;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: white;
+    background-color: black;
+}
+
+.galery {
+
+    width: 100%;
+
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-bottom: 25px;
+}
+
+.frameworkGalery {
+    margin: 1%;
+    width: 550px;
+    height: 450px;
+}
+
+.picture {
+    width: 550px;
+    height: 450px;
+
+}
+
+@media all and (max-width: 500px) {
+
+    .frameworkGalery {
+
+        width: 550px;
+        height: 450px;
+    }
+
+    .picture {
+        width: 350px;
+        height: 250px;
+
+    }
+
+}
+
+@media all and (max-width: 350px) {
+
+    .galeryTitle {
+        font-size: 1.2rem;
+    }
+
+    .frameworkGalery {
+
+        width: 250px;
+        height: 150px;
+    }
+
+    .picture {
+        width: 250px;
+        height: 150px;
+
+    }
+
+}
+
+
+
+/*---------- CONTAINER 5 ------------*/
+
+.container5 {
+    height: 10vh;
+}
+
+footer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.footerLeft {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+
+
+.logoFooter {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    font-size: 2rem;
+    color: black;
+    cursor: pointer;
+    margin-left: 5%;
+    margin-right: 5%;
+
+}
+
+.one {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+
+@media all and (max-width: 500px) {
+
+    .footerLeft {
+        width: 90%;
+
+    }
+
+}
